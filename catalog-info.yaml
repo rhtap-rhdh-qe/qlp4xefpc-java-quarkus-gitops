@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: qlp4xefpc-java-quarkus-gitops
+  description: This is GitOps manifest for qlp4xefpc-java-quarkus   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: qlp4xefpc-java-quarkus
+    janus-idp.io/tekton: qlp4xefpc-java-quarkus 
+    backstage.io/kubernetes-id: qlp4xefpc-java-quarkus 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:qlp4xefpc-java-quarkus
